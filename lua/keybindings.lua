@@ -10,6 +10,7 @@ map('n', '<C-k>', '<C-w>k', opts)
 -- Window splitting
 map('n', 'ss', ':split<CR>', opts)
 map('n', 'vs', ':vsplit<CR>', opts)
+map('n', 'sc', ':close<CR>', opts)
 
 -- Tabs navigation
 map('n', '<Tab>', ':BufferNext<CR>', opts)
@@ -41,11 +42,15 @@ wk.register({
             g = { "<cmd>Telescope live_grep<cr>", "grep" },
         },
         g = {
-            name = "go-to",
+            name = "goto",
             d = "definition",
             D = "declaration",
             i = "implementation",
             r = "references",
+        },
+        p = {
+            name = "project",
+            r = "restore",
         },
     },
     { prefix = '<leader>' }

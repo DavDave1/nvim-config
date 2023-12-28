@@ -39,5 +39,16 @@ return {
             "nvim-telescope/telescope.nvim",
         },
         config = true
-    }
+    },
+
+    -- Session restore
+    {
+        "folke/persistence.nvim",
+        event = "BufReadPre",
+        opts = {},
+        config = function()
+            vim.api.nvim_set_keymap('n', '<leader>pr', [[<cmd>lua require('persistence').load()<cr>]], {})
+        end
+    },
+
 }

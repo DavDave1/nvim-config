@@ -7,7 +7,7 @@ return {
         priority = 1000,
         config = function()
             require('catppuccin').setup({
-                transparent_background = false,
+                transparent_background = true,
 
             })
             vim.cmd.colorscheme("catppuccin")
@@ -80,6 +80,14 @@ return {
             vim.o.timeoutlen = 300
         end,
         opts = {}
+    },
+
+    -- Dashboard
+    {
+        "nvimdev/dashboard-nvim",
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+        event = 'VimEnter',
+        opts = {},
     },
 
 }

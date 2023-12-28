@@ -18,7 +18,17 @@ return {
         -- Snippets
         "rafamadriz/friendly-snippets",
 
+        -- Autocompletion utils for neovim lua config
         "folke/neodev.nvim",
+
+        -- Codeium AI autocompletion
+        {
+            "Exafunction/codeium.nvim",
+            cmd = "Codeium",
+            build = ":Codeium Auth",
+            opts = {},
+        }
+
     },
     config = function()
         require('neodev').setup()
@@ -108,6 +118,7 @@ return {
                 { name = 'nvim_lsp' },
                 { name = 'luasnip' },
                 { name = 'path' },
+                { name = 'codeium' }
             }
         })
     end
