@@ -6,11 +6,10 @@ return {
         name = "catppuccin",
         priority = 1000,
         config = function()
-            require('catppuccin').setup({
+            require("catppuccin").setup({
                 transparent_background = true,
-
             })
-            vim.cmd.colorscheme("catppuccin")
+            vim.cmd.colorscheme("catppuccin-frappe")
         end
     },
 
@@ -33,15 +32,6 @@ return {
         config = function()
             vim.keymap.set('n', '<leader>e', ':Neotree toggle<CR>')
         end
-    },
-
-    -- Tabs
-    {
-        "romgrk/barbar.nvim",
-        depenencies = {
-            "lewis6991/gitsigns.nvim",
-            "nvim-tree/nvim-web-devicons",
-        },
     },
 
     -- Noice widgets
@@ -68,6 +58,13 @@ return {
                 inc_rename = false,           -- enables an input dialog for inc-rename.nvim
                 lsp_doc_border = false,       -- add a border to hover docs and signature help
             },
+        }
+    },
+
+    {
+        "rcarriga/nvim-notify",
+        opts = {
+            background_colour = "#000000",
         }
     },
 
